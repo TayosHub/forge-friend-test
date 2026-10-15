@@ -1,0 +1,13 @@
+Demo video drop-in
+==================
+Licensed Forge ExerciseMedia clips are NOT used on the public page.
+
+To show a real clip in the exercise-demo phone frame, place a short muted
+H.264 MP4 named exactly:
+
+  demo.mp4
+
+next to index.html (same folder). The page autoplays/loops it when present;
+otherwise it shows the placeholder: "Demo video plays here in the app".
+
+Intended source: a self-shot clip from Tayo (redistributable).

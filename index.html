@@ -122,6 +122,84 @@ pre{white-space:pre-wrap;word-break:break-all;background:var(--s1);border:1px so
   .timer i{animation:none;width:0}
   .opt:active,.btn:active{transform:none}
 }
+
+/* ===== In-context phone recreations (faithful Forge chrome; sample data) ===== */
+.ic-label{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--t3);margin:0 0 10px}
+.ic-label i{width:6px;height:6px;border-radius:50%;background:var(--b400)}
+.ic-tabs{display:flex;gap:6px;margin:0 0 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.ic-tabs::-webkit-scrollbar{display:none}
+.ic-tab{flex:none;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--s1);color:var(--t2);font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.ic-tab.on{border-color:var(--b500);background:rgba(0,122,255,.14);color:var(--t1)}
+.ic-names{display:flex;gap:8px;margin:0 0 14px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+.ic-names::-webkit-scrollbar{display:none}
+.ic-name{flex:none;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:var(--s1);color:var(--t1);font:inherit;font-weight:800;cursor:pointer;transition:border-color .18s,background .18s}
+.ic-name.on{border-color:var(--b500);background:rgba(0,122,255,.14)}
+.ic-phone{width:100%;max-width:340px;margin:0 auto;aspect-ratio:390/844;border-radius:44px;padding:10px;background:#0a0a0e;box-shadow:inset 0 0 0 1px #2A2A33,0 18px 40px rgba(0,0,0,.35);position:relative}
+.ic-bezel{height:100%;border-radius:36px;overflow:hidden;position:relative;background:#08080F;display:flex;flex-direction:column}
+.ic-status{flex:none;display:flex;justify-content:space-between;align-items:center;padding:12px 22px 6px;font-size:13px;font-weight:800;color:#fff;position:relative;z-index:2}
+.ic-status .isl{position:absolute;left:50%;top:8px;width:78px;height:22px;margin-left:-39px;border-radius:12px;background:#000}
+.ic-scroll{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:0 14px 88px;position:relative;z-index:1}
+.ic-tabbar{position:absolute;left:10px;right:10px;bottom:10px;height:58px;border-radius:22px;background:rgba(20,20,28,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:repeat(5,1fr);align-items:center;z-index:3;padding:0 4px}
+.ic-tabbar span{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:9px;font-weight:700;color:rgba(255,255,255,.42)}
+.ic-tabbar span.on{color:#3AABFF}
+.ic-tabbar b{width:18px;height:18px;border-radius:6px;background:currentColor;opacity:.85}
+/* Snow hydration */
+.ic-snow{background:linear-gradient(180deg,#1a2438 0%,#0c1018 42%,#08080F 100%);position:relative}
+.ic-snow::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse 80% 50% at 10% 0%,rgba(235,245,255,.22),transparent 55%),
+  radial-gradient(ellipse 70% 45% at 90% 5%,rgba(200,220,255,.14),transparent 50%),
+  radial-gradient(ellipse 100% 40% at 50% 100%,rgba(245,250,255,.18),transparent 55%);
+  pointer-events:none;z-index:0}
+.ic-flake{position:absolute;width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.75);z-index:0;animation:flake 7s linear infinite;opacity:.7}
+@keyframes flake{from{transform:translateY(-10px)}to{transform:translateY(110%)}}
+@media (prefers-reduced-motion:reduce){.ic-flake{animation:none;opacity:.35}}
+.ic-brand{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#5AC8FA;margin:8px 0 4px;position:relative;z-index:1}
+.ic-h1{font-size:22px;line-height:26px;font-weight:800;color:#fff;margin:0 0 12px;position:relative;z-index:1}
+.ic-card{background:rgba(25,25,34,.72);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:14px;margin:0 0 10px;position:relative;z-index:1;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.ic-card.frost{box-shadow:inset 0 0 0 1px rgba(200,220,255,.18),0 8px 24px rgba(0,0,0,.2)}
+.ic-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ic-ring{width:72px;height:72px;border-radius:50%;background:
+  conic-gradient(#5AC8FA 0 68%,rgba(255,255,255,.12) 0);
+  display:grid;place-items:center;flex:none}
+.ic-ring > i{width:56px;height:56px;border-radius:50%;background:#12141c;display:grid;place-items:center;font-size:13px;font-weight:800;color:#fff}
+.ic-meta{font-size:12px;font-weight:700;color:rgba(255,255,255,.55)}
+.ic-val{font-size:28px;font-weight:900;letter-spacing:-.02em;color:#fff}
+.ic-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.ic-pill{padding:10px 12px;border-radius:12px;background:rgba(90,200,250,.14);border:1px solid rgba(90,200,250,.28);color:#E8F8FF;font-size:13px;font-weight:800}
+.ic-chip{font-size:11px;font-weight:800;color:#5AC8FA;background:rgba(90,200,250,.12);border:1px solid rgba(90,200,250,.25);border-radius:999px;padding:5px 9px}
+/* Live workout */
+.ic-wo{background:#08080F}
+.ic-wo .ic-brand{color:#3AABFF;letter-spacing:.08em}
+.ic-wo-top{display:flex;justify-content:space-between;align-items:baseline;margin:4px 0 10px}
+.ic-wo-top .t{font-size:12px;font-weight:700;color:rgba(255,255,255,.5)}
+.ic-ex{font-size:20px;font-weight:800;color:#fff;margin:0 0 6px}
+.ic-cue{font-size:13px;font-weight:600;color:rgba(255,255,255,.62);margin:0 0 12px}
+.ic-set{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 10px}
+.ic-stat{background:#191922;border:1px solid #2D2D3D;border-radius:14px;padding:12px}
+.ic-stat .k{font-size:11px;font-weight:700;color:rgba(255,255,255,.48);margin-bottom:4px}
+.ic-stat .v{font-size:22px;font-weight:900;color:#fff}
+.ic-done{display:flex;align-items:center;justify-content:center;height:48px;border-radius:14px;background:#007AFF;color:#fff;font-weight:800;margin:8px 0 10px;box-shadow:0 8px 20px rgba(0,122,255,.25)}
+.ic-hist{font-size:12px;font-weight:600;color:rgba(255,255,255,.5);line-height:1.5}
+.ic-hist b{color:rgba(255,255,255,.85);font-weight:800}
+/* Demo player + tips */
+.ic-demo{background:#08080F;display:flex;flex-direction:column;min-height:0}
+.ic-demo-stage{flex:none;margin:0 -14px;aspect-ratio:4/3;background:#0e1016;position:relative;display:grid;place-items:center;overflow:hidden;border-bottom:1px solid #2D2D3D}
+.ic-demo-stage video{width:100%;height:100%;object-fit:cover;display:block}
+.ic-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;width:100%;height:100%;
+  background:radial-gradient(ellipse at 50% 40%,rgba(0,122,255,.12),transparent 60%),#0e1016}
+.ic-ph .box{width:56px;height:56px;border-radius:16px;border:1.5px dashed rgba(255,255,255,.28);display:grid;place-items:center}
+.ic-ph .box svg{opacity:.7}
+.ic-ph p{margin:0;font-size:13px;line-height:18px;font-weight:700;color:rgba(255,255,255,.62);max-width:200px}
+.ic-ph .hint{font-size:11px;font-weight:600;color:rgba(255,255,255,.38)}
+.ic-demo-title{font-size:18px;font-weight:800;color:#fff;margin:12px 0 4px}
+.ic-tips{margin:8px 0 0;padding:12px;border-radius:16px;background:#191922;border:1px solid #2D2D3D}
+.ic-tips h3{margin:0 0 10px;font-size:14px;font-weight:800;color:#fff;display:flex;align-items:center;gap:8px}
+.ic-tips h3 span{width:8px;height:8px;border-radius:50%;background:#007AFF}
+.ic-tip{display:flex;gap:10px;margin:0 0 10px;font-size:13px;line-height:18px;font-weight:600;color:rgba(255,255,255,.72)}
+.ic-tip:last-child{margin-bottom:0}
+.ic-tip i{flex:none;width:20px;height:20px;border-radius:50%;background:rgba(0,122,255,.2);color:#7CC4FF;font-style:normal;font-size:11px;font-weight:800;display:grid;place-items:center}
+.ic-panel{max-height:100%;}
 </style></head><body><div class="wrap">
 <div class="top" aria-hidden="true"><div class="track"><i id="prog"></i></div><div class="stepno" id="stepno"></div></div>
 <div id="app"></div>
@@ -352,6 +430,154 @@ STEPS.push({ html: () => { const words = [["calm","Calm"],["pow","Powerful"],["p
 STEPS.push({ html: () => `<div class="body"><h2>Memory check</h2><p>Without scrolling back: which app names from the start do you remember? Type any you can, spelled however.</p>
     <textarea id="rec" maxlength="140" placeholder="e.g. …"></textarea></div>${cta("Next")}`,
   save: () => { R.rec = document.getElementById("rec").value; } });
+
+/* ===== In-context: names inside faithful Forge screen recreations (sample data).
+   Drop a self-shot clip as demo.mp4 beside index.html to replace the placeholder. ===== */
+const DEMO_VIDEO_SRC = "demo.mp4";
+const IC_SAMPLE = { intakeOz: 44, goalOz: 64, weather: "Snowy today", exercise: "Goblet Squat", load: "70", unit: "lb", reps: "8", setN: 2, setTotal: 4 };
+const IC_TIPS = [
+  "Brace before you move — ribs down, tension through the midsection.",
+  "Sit the hips back and down; keep the chest proud without flaring.",
+  "Drive through mid-foot; stand tall without rushing the lockout.",
+  "Use a tempo you can own; stop a rep before form slips."
+];
+let icScreen = 0; // 0 hydration, 1 workout, 2 demo
+let icNameIdx = 0;
+function icName() { return NAMES[icNameIdx % NAMES.length]; }
+function icFlakes() {
+  return Array.from({length: 14}, (_, i) => `<i class="ic-flake" style="left:${6+i*6.5}%;top:${(i*17)%80}%;animation-delay:${(i%7)*0.45}s;animation-duration:${5.5+(i%5)*0.7}s;width:${2+(i%3)}px;height:${2+(i%3)}px"></i>`).join("");
+}
+function icTabbar(active) {
+  const tabs = [["home","Home"],["programs","Programs"],["workout","Workout"],["hydration","Hydration"],["profile","You"]];
+  return `<div class="ic-tabbar" aria-hidden="true">${tabs.map(([id,l]) => `<span class="${id===active?"on":""}"><b></b>${l}</span>`).join("")}</div>`;
+}
+function icNameChips() {
+  return `<div class="ic-names" role="tablist" aria-label="App name">${NAMES.map((n,i) => `<button type="button" class="ic-name${i===icNameIdx?" on":""}" data-icn="${i}" role="tab" aria-selected="${i===icNameIdx}">${n}</button>`).join("")}</div>`;
+}
+function icScreenTabs() {
+  const labs = ["Hydration · Snow","Live workout","Exercise demo"];
+  return `<div class="ic-tabs" role="tablist">${labs.map((l,i) => `<button type="button" class="ic-tab${i===icScreen?" on":""}" data-ics="${i}" role="tab" aria-selected="${i===icScreen}">${l}</button>`).join("")}</div>`;
+}
+function icHydrationHTML(name) {
+  const pct = Math.round(100 * IC_SAMPLE.intakeOz / IC_SAMPLE.goalOz);
+  return `<div class="ic-phone"><div class="ic-bezel ic-snow">${icFlakes()}
+    <div class="ic-status"><span>9:41</span><span class="isl"></span><span>· ·</span></div>
+    <div class="ic-scroll">
+      <div class="ic-brand">${name}</div>
+      <div class="ic-h1">Hydration</div>
+      <div class="ic-chip">${IC_SAMPLE.weather} · sample data</div>
+      <div class="ic-card frost" style="margin-top:12px">
+        <div class="ic-row">
+          <div><div class="ic-meta">Today</div><div class="ic-val">${IC_SAMPLE.intakeOz} oz</div><div class="ic-meta">of ${IC_SAMPLE.goalOz} oz goal</div></div>
+          <div class="ic-ring"><i>${pct}%</i></div>
+        </div>
+        <div class="ic-meta" style="margin-top:10px">On pace · snow theme (sample)</div>
+      </div>
+      <div class="ic-card frost">
+        <div class="ic-meta">Quick add</div>
+        <div class="ic-pills"><span class="ic-pill">8 oz</span><span class="ic-pill">12 oz</span><span class="ic-pill">16 oz</span></div>
+      </div>
+    </div>
+    ${icTabbar("hydration")}
+  </div></div>`;
+}
+function icWorkoutHTML(name) {
+  return `<div class="ic-phone"><div class="ic-bezel ic-wo">
+    <div class="ic-status"><span>9:41</span><span class="isl"></span><span>· ·</span></div>
+    <div class="ic-scroll">
+      <div class="ic-brand">${name}</div>
+      <div class="ic-wo-top"><span class="t">Live session · sample data</span><span class="t">12:04</span></div>
+      <div class="ic-ex">${IC_SAMPLE.exercise}</div>
+      <div class="ic-cue">Set ${IC_SAMPLE.setN} of ${IC_SAMPLE.setTotal} · Standard</div>
+      <div class="ic-set">
+        <div class="ic-stat"><div class="k">Weight</div><div class="v">${IC_SAMPLE.load} ${IC_SAMPLE.unit}</div></div>
+        <div class="ic-stat"><div class="k">Reps</div><div class="v">${IC_SAMPLE.reps}</div></div>
+      </div>
+      <div class="ic-done">Log set</div>
+      <div class="ic-hist"><b>Set 1</b> · 70 lb × 8<br><b>Up next</b> · Romanian Deadlift</div>
+    </div>
+    ${icTabbar("workout")}
+  </div></div>`;
+}
+function icDemoHTML(name) {
+  return `<div class="ic-phone"><div class="ic-bezel ic-demo">
+    <div class="ic-status"><span>9:41</span><span class="isl"></span><span>· ·</span></div>
+    <div class="ic-scroll ic-panel">
+      <div class="ic-brand">${name}</div>
+      <div class="ic-demo-stage" id="demoStage">
+        <div class="ic-ph" id="demoPh">
+          <div class="box" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="rgba(255,255,255,.55)" stroke-width="1.6"/><path d="M10 9.5v5l5-2.5-5-2.5z" fill="rgba(255,255,255,.55)"/></svg></div>
+          <p>Demo video plays here in the app</p>
+          <div class="hint">Self-shot clip drops in as demo.mp4</div>
+        </div>
+        <video id="demoVid" class="hide" muted autoplay loop playsinline preload="metadata" src="${DEMO_VIDEO_SRC}"></video>
+      </div>
+      <div class="ic-demo-title">${IC_SAMPLE.exercise}</div>
+      <div class="ic-meta">Form tips · scroll inside the phone · sample data</div>
+      <div class="ic-tips">
+        <h3><span></span>Coaching tips</h3>
+        ${IC_TIPS.map((tip,i) => `<div class="ic-tip"><i>${i+1}</i><span>${tip}</span></div>`).join("")}
+        <div class="ic-tip"><i>5</i><span>Keep the kettlebell close; elbows soft, wrists neutral.</span></div>
+        <div class="ic-tip"><i>6</i><span>If the floor feels far, shorten the depth and own the last clean rep.</span></div>
+      </div>
+    </div>
+  </div></div>`;
+}
+function icPhoneHTML() {
+  const n = icName();
+  if (icScreen === 0) return icHydrationHTML(n);
+  if (icScreen === 1) return icWorkoutHTML(n);
+  return icDemoHTML(n);
+}
+function mountInContext(check) {
+  const root = document.getElementById("icRoot");
+  if (!root) return;
+  const paint = () => {
+    root.innerHTML = icScreenTabs() + icNameChips() + `<div id="icPhone">${icPhoneHTML()}</div>`;
+    root.querySelectorAll("[data-ics]").forEach(el => el.onclick = () => { icScreen = +el.dataset.ics; paint(); });
+    root.querySelectorAll("[data-icn]").forEach(el => el.onclick = () => { icNameIdx = +el.dataset.icn; paint(); });
+    // Swipe between names on the phone
+    const phone = root.querySelector("#icPhone");
+    let x0 = null;
+    phone.addEventListener("touchstart", e => { x0 = e.changedTouches[0].clientX; }, {passive:true});
+    phone.addEventListener("touchend", e => {
+      if (x0 == null) return;
+      const dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) < 40) return;
+      icNameIdx = (icNameIdx + (dx < 0 ? 1 : NAMES.length - 1)) % NAMES.length;
+      paint();
+    }, {passive:true});
+    const vid = document.getElementById("demoVid");
+    const ph = document.getElementById("demoPh");
+    if (vid && ph) {
+      const showVid = () => { ph.classList.add("hide"); vid.classList.remove("hide"); try { vid.play(); } catch (e) {} };
+      const showPh = () => { vid.classList.add("hide"); ph.classList.remove("hide"); };
+      vid.addEventListener("loadeddata", showVid);
+      vid.addEventListener("error", showPh);
+      // probe: if file missing, error fires; if present, loadeddata fires
+      try { vid.load(); } catch (e) { showPh(); }
+    }
+  };
+  paint();
+}
+
+STEPS.push({ html: () => `<div class="body"><h2>Now see the names in the&nbsp;app</h2>
+    <p class="lede">Same names, inside real Forge screens. Everything inside the phones is <b>sample data</b> — not your numbers.</p>
+    <p>Swipe the name chips (or the phone) to try each one. Switch Hydration, workout, and the exercise demo.</p>
+    <p class="soft">Gut reactions came first on purpose. This is only the “in context” pass.</p></div>${cta("Show me")}` });
+
+STEPS.push({ html: () => `<div class="body"><div class="ic-label"><i></i>In context · sample data</div>
+    <div id="icRoot"></div>
+    <p class="soft" style="margin-top:14px">Snow hydration, live session, and the exercise player with a scrolling tips panel — the way they feel in Forge.</p></div>${cta("Next")}`,
+  mount: mountInContext });
+
+STEPS.push({ html: () => `<div class="body"><h2>Which name fits the app best&nbsp;now?</h2>
+    <p>After seeing them on the screens — pick one.</p>
+    <div class="opts" role="radiogroup">${shuffle(NAMES).map(n => opt("ic_fit", n, n)).join("")}</div>
+    <label class="q">Did that change your earlier pick?</label>
+    <div class="opts" role="radiogroup">${opt("ic_chg","1","Yes, it changed")}${opt("ic_chg","0","No, same as before")}${opt("ic_chg","9","Not sure")}</div></div>${cta("Next", true)}`,
+  req: ["ic_fit","ic_chg"] });
+
 STEPS.push({ html: () => `<div class="body"><h2>Last three, for honesty</h2>
     <label class="q">Before today, had you seen any of these logos (for example, I showed you)?</label><div class="opts">${opt("seen","1","Yes")}${opt("seen","0","No")}${opt("seen","9","Not sure")}</div>
     <label class="q">Did you already know I was building this app?</label><div class="opts">${opt("knew","1","Yes")}${opt("knew","0","No")}</div>
@@ -383,6 +609,7 @@ function encodeResult() {
     "torder=" + tagOrder.map(x => x.k).join(">"), "tf=" + g("tf"), "tm=" + g("tm"));
   TAGLINES.forEach(x => p.push("te_" + x.k + "=" + clean((R.te || {})[x.k])));
   p.push("wmorder=" + wmOrder.map(x => x.k).join(">"), "wf=" + g("wf"), "wp=" + g("wp"), "wr=" + g("wr"));
+  p.push("ic_fit=" + g("ic_fit"), "ic_chg=" + g("ic_chg"));
   p.push("seen=" + g("seen"), "knew=" + g("knew"), "kn=" + g("kn"), "secs=" + Math.round((Date.now() - R.t0) / 1000));
   return p.join(";");
 }
