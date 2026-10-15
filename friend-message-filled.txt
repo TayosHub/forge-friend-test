@@ -1,0 +1,24 @@
+[LIVE] Temporary host: https://github.com/TayosHub/forge-friend-test → https://tayoshub.github.io/forge-friend-test/ Delete after the test. noindex.
+
+SHORT VERSION (paste as one text)
+
+Hey! Small favour: I'm building an app and I'm stuck between a few names, a logo, a short line and how the wordmark should look. It's an ~8-minute tap-through, anonymous, works on your phone: https://tayoshub.github.io/forge-friend-test/
+First reactions are the useful ones, so please don't Google anything or ask me about it until you're done. At the end there's a button that texts your answers back to me. Thank you!! 🙏
+
+EVEN SHORTER (group chats)
+
+Got 8 min? I'm testing name + logo + line ideas for my app. Quick anonymous tap-through, no right answers: https://tayoshub.github.io/forge-friend-test/. Please do it before chatting about it in here, it matters 🙏
+
+FOLLOW-UP (2-3 days later, once only)
+
+No pressure at all, but if you get 8 minutes this week, my name test is here: https://tayoshub.github.io/forge-friend-test/. Thanks to everyone who already did it!
+
+NOTES FOR TAYO
+- The texts no longer say "strength-training app": the first question checks whether people can guess what each name is for, so don't tell them first.
+- Rotate links so each variant gets the same number of people. Send them in this order and repeat: https://tayoshub.github.io/forge-friend-test/?v=A&s=1, https://tayoshub.github.io/forge-friend-test/?v=B&s=2, https://tayoshub.github.io/forge-friend-test/?v=C&s=3, https://tayoshub.github.io/forge-friend-test/?v=A&s=2, https://tayoshub.github.io/forge-friend-test/?v=B&s=3, https://tayoshub.github.io/forge-friend-test/?v=C&s=1, https://tayoshub.github.io/forge-friend-test/?v=A&s=3, https://tayoshub.github.io/forge-friend-test/?v=B&s=1, https://tayoshub.github.io/forge-friend-test/?v=C&s=2. That's 9 links covering every variant × logo pair once. A bare https://tayoshub.github.io/forge-friend-test/ picks a variant at random, which won't balance with small numbers.
+  A = Forge, Trueset, Steadfire, Earnest, Revik · B = Forge, Trueset, Steadfire, Tensile, Revik · C = Forge, Trueset, Earnest, Tensile, Revik
+- Revik is said "REV-ik". Don't say it out loud to anyone before they take the test.
+- Taglines and wordmark options are randomized inside the page; no link params needed for those.
+- Send it 1:1 where you can. Group chats spread discussion, which spoils the "heard once" and 5-second questions.
+- Don't say which name, logo, line or wordmark you like. The test asks about this at the end and flags anyone who knew.
+- Temper and Bellows are fully out of this build (Temper is taken by other fitness apps).

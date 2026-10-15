@@ -313,7 +313,7 @@ function say(n) { try { const u = new SpeechSynthesisUtterance(n); u.lang = "en-
    every name question happens BEFORE anything says "strength" or "Forge" (the reveal). */
 const STEPS = [];
 STEPS.push({ html: () => `<div class="body welcome"><h1>Got 8 minutes? I need a friend's&nbsp;eye</h1>
-    <div class="chips">${CONFIG.DRAFT ? '<span class="chip draft">DRAFT</span>' : ""}<span class="chip">About 8 minutes</span><span class="chip">Anonymous</span><span class="chip">Sound on</span></div>
+    <div class="chips">${CONFIG.DRAFT ? '<span class="chip draft">DRAFT</span>' : ""}<span class="chip">About 8 minutes</span><span class="chip">Anonymous</span></div>
     <p class="lede">I'm building an app and I'm stuck between a few names, a logo, a short line, and how the word should look in type.</p>
     <p class="lede">There are no right answers. First reactions help the most — please don't overthink it, and don't ask me about it until you're done.</p>
     <ol class="how"><li><span>1</span>Hear a few names and guess what they are</li><li><span>2</span>A 5-second glance at a phone screen</li><li><span>3</span>Pick a short line for the app</li><li><span>4</span>Pick how the name looks in type</li><li><span>5</span>Send your answers, if you like</li></ol>
@@ -431,8 +431,7 @@ STEPS.push({ html: () => `<div class="body"><h2>Memory check</h2><p>Without scro
     <textarea id="rec" maxlength="140" placeholder="e.g. …"></textarea></div>${cta("Next")}`,
   save: () => { R.rec = document.getElementById("rec").value; } });
 
-/* ===== In-context: names inside faithful Forge screen recreations (sample data).
-   Drop a self-shot clip as demo.mp4 beside index.html to replace the placeholder. ===== */
+/* ===== In-context: names inside faithful Forge screen recreations (sample data). ===== */
 const DEMO_VIDEO_SRC = "demo.mp4";
 const IC_SAMPLE = { intakeOz: 44, goalOz: 64, weather: "Snowy today", exercise: "Goblet Squat", load: "70", unit: "lb", reps: "8", setN: 2, setTotal: 4 };
 const IC_TIPS = [
@@ -508,7 +507,6 @@ function icDemoHTML(name) {
         <div class="ic-ph" id="demoPh">
           <div class="box" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="rgba(255,255,255,.55)" stroke-width="1.6"/><path d="M10 9.5v5l5-2.5-5-2.5z" fill="rgba(255,255,255,.55)"/></svg></div>
           <p>Demo video plays here in the app</p>
-          <div class="hint">Self-shot clip drops in as demo.mp4</div>
         </div>
         <video id="demoVid" class="hide" muted autoplay loop playsinline preload="metadata" src="${DEMO_VIDEO_SRC}"></video>
       </div>
